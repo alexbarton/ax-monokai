@@ -9,11 +9,13 @@ SOURCE = AX-Monokai.conf
 TARGETS = \
 	out/ax-monokai.inc.sh \
 	out/kitty.conf \
+	out/vivaldi.zip \
 
 ENVSUBST_TARGETS = \
 	out/vscode-terminal.json \
 
 ALL_TARGETS = $(TARGETS) $(ENVSUBST_TARGETS) \
+	tmp/vivaldi/settings.json \
 
 TARGET_HEADER_TITLE = Alex' Monokai Color Scheme: AX-Monokai
 TARGET_HEADER_FILE = Generated file ($(SOURCE) -> %s), do not edit!
@@ -24,7 +26,7 @@ check: all
 
 clean:
 	rm -fv $(TARGETS)
-	rm -frv out
+	rm -frv tmp out
 
 distclean: clean
 
@@ -45,6 +47,13 @@ out/kitty.conf: $(SOURCE) Makefile
 	printf "# $(TARGET_HEADER_TITLE)\n" >"$@"
 	printf "# $(TARGET_HEADER_FILE)\n\n" "$@" >>"$@"
 	grep "^[a-z]" AX-Monokai.conf >>"$@"
+
+tmp/vivaldi/settings.json: $(SOURCE) Makefile out/ax-monokai.inc.sh
+	mkdir -p "$(@D)"
+	sh -c '. out/ax-monokai.inc.sh && cat assets/vivaldi.json | envsubst' >>"$@"
+
+out/vivaldi.zip: tmp/vivaldi/settings.json Makefile
+	zip -j out/vivaldi.zip tmp/vivaldi/settings.json
 
 # Generic Generators
 
