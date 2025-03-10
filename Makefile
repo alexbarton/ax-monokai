@@ -30,6 +30,7 @@ check: all
 	unzip -l out/vivaldi.zip | grep -Fq 'settings.json'
 	grep -Fq '#fd971f' out/vscode-terminal.json
 	grep -Fq '"colorWindowBg": "#1e1f1c",' tmp/vivaldi/settings.json
+	@printf "\n\e[32;1mAll tests passed.\e[m\n\n"
 
 clean:
 	rm -fv $(TARGETS)
