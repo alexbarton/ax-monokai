@@ -8,6 +8,7 @@ SOURCE = AX-Monokai.conf
 
 TARGETS = \
 	out/ax-monokai.inc.sh \
+	out/ghostty.conf \
 	out/kitty.conf \
 	out/vivaldi.zip \
 
@@ -24,6 +25,7 @@ all: $(TARGETS) $(ENVSUBST_TARGETS)
 
 check: all
 	grep -Fq 'export cursor="#ff5820"' out/ax-monokai.inc.sh
+	grep -Fq 'palette = 13=#fb87ff' out/ghostty.conf
 	grep -Fq 'selection_background #0A5D78' out/kitty.conf
 	unzip -l out/vivaldi.zip | grep -Fq 'settings.json'
 	grep -Fq '#fd971f' out/vscode-terminal.json
@@ -46,6 +48,17 @@ out/ax-monokai.inc.sh: $(SOURCE) Makefile
 	printf "# $(TARGET_HEADER_TITLE)\n" >"$@"
 	printf "# $(TARGET_HEADER_FILE)\n\n" "$@" >>"$@"
 	sed -En -e 's/^([_[:alnum:]]*) (.*)$$/export \1="\2"/p' "$(SOURCE)" >>"$@"
+
+out/ghostty.conf: $(SOURCE) Makefile
+	mkdir -p "$(@D)"
+	printf "# $(TARGET_HEADER_TITLE)\n" >"$@"
+	printf "# $(TARGET_HEADER_FILE)\n\n" "$@" >>"$@"
+	grep "^[a-z]" "$(SOURCE)" | sed -E \
+		-e 's/^([_[:alnum:]]*) (.*)$$/\1 = "\2"/' \
+		-e 's/_/-/g' -e 's/"//g' \
+		-e 's/^cursor /cursor-color /' -e 's/cursor-text-color/cursor-text/' \
+		-e 's/^color([[:digit:]]+) = (.*)/palette = \1=\2/' \
+		>>"$@"
 
 out/kitty.conf: $(SOURCE) Makefile
 	mkdir -p "$(@D)"
