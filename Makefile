@@ -45,13 +45,13 @@ out/ax-monokai.inc.sh: $(SOURCE) Makefile
 	mkdir -p "$(@D)"
 	printf "# $(TARGET_HEADER_TITLE)\n" >"$@"
 	printf "# $(TARGET_HEADER_FILE)\n\n" "$@" >>"$@"
-	grep "^[a-z]" AX-Monokai.conf | sed -Ee 's/^([_[:alnum:]]*) (.*)$$/export \1="\2" /' >>"$@"
+	grep "^[a-z]" "$(SOURCES)" | sed -Ee 's/^([_[:alnum:]]*) (.*)$$/export \1="\2" /' >>"$@"
 
 out/kitty.conf: $(SOURCE) Makefile
 	mkdir -p "$(@D)"
 	printf "# $(TARGET_HEADER_TITLE)\n" >"$@"
 	printf "# $(TARGET_HEADER_FILE)\n\n" "$@" >>"$@"
-	grep "^[a-z]" AX-Monokai.conf >>"$@"
+	grep "^[a-z]" "$(SOURCE)" >>"$@"
 
 tmp/vivaldi/settings.json: $(SOURCE) Makefile out/ax-monokai.inc.sh
 	mkdir -p "$(@D)"
