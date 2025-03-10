@@ -45,7 +45,7 @@ out/ax-monokai.inc.sh: $(SOURCE) Makefile
 	mkdir -p "$(@D)"
 	printf "# $(TARGET_HEADER_TITLE)\n" >"$@"
 	printf "# $(TARGET_HEADER_FILE)\n\n" "$@" >>"$@"
-	grep "^[a-z]" "$(SOURCES)" | sed -Ee 's/^([_[:alnum:]]*) (.*)$$/export \1="\2" /' >>"$@"
+	sed -En -e 's/^([_[:alnum:]]*) (.*)$$/export \1="\2"/p' "$(SOURCE)" >>"$@"
 
 out/kitty.conf: $(SOURCE) Makefile
 	mkdir -p "$(@D)"
