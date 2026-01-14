@@ -1,5 +1,4 @@
 # Alex' Monokai Color Scheme: AX-Monokai
-# 2024-11-16, alex@barton.de
 #
 # AX-Monokai Makefile
 #
@@ -54,7 +53,7 @@ out/ghostty.conf: $(SOURCE) Makefile
 	mkdir -p "$(@D)"
 	printf "# $(TARGET_HEADER_TITLE)\n" >"$@"
 	printf "# $(TARGET_HEADER_FILE)\n\n" "$@" >>"$@"
-	grep "^[a-z]" "$(SOURCE)" | sed -E \
+	grep "^[a-fh-z]" "$(SOURCE)" | sed -E \
 		-e 's/^([_[:alnum:]]*) (.*)$$/\1 = "\2"/' \
 		-e 's/_/-/g' -e 's/"//g' \
 		-e 's/^cursor /cursor-color /' -e 's/cursor-text-color/cursor-text/' \
@@ -65,7 +64,7 @@ out/kitty.conf: $(SOURCE) Makefile
 	mkdir -p "$(@D)"
 	printf "# $(TARGET_HEADER_TITLE)\n" >"$@"
 	printf "# $(TARGET_HEADER_FILE)\n\n" "$@" >>"$@"
-	grep "^[a-z]" "$(SOURCE)" >>"$@"
+	grep "^[a-fh-z]" "$(SOURCE)" >>"$@"
 
 tmp/vivaldi/settings.json: $(SOURCE) Makefile out/ax-monokai.inc.sh
 	mkdir -p "$(@D)"
