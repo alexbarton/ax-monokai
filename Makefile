@@ -26,7 +26,7 @@ all: $(TARGETS) $(ENVSUBST_TARGETS)
 check: all
 	grep -Fq 'export cursor="#ff5820"' out/ax-monokai.inc.sh
 	grep -Fq 'palette = 13=#fb87ff' out/ghostty.conf
-	grep -Fq 'selection_background #0A5D78' out/kitty.conf
+	grep -Fq 'selection_background #0a5d78' out/kitty.conf
 	unzip -l out/vivaldi.zip | grep -Fq 'settings.json'
 	grep -Fq '#fd971f' out/vscode-terminal.json
 	grep -Fq '"colorWindowBg": "#1e1f1c",' tmp/vivaldi/settings.json
