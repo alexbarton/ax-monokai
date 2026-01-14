@@ -1,0 +1,492 @@
+{
+	"$schema": "vscode://schemas/color-theme",
+	"name": "AX-Monokai",
+	"type": "dark",
+	"colors": {
+		"actionBar.toggledBackground": "${gray3}",
+		"activityBar.activeBackground": "${background}",
+		"activityBar.activeBorder": "${color1}",
+		"activityBar.background": "${background}",
+		"activityBar.border": "${gray3}",
+		"activityBar.foreground": "${foreground}",
+		"activityBar.inactiveForeground": "${color8}",
+		"activityBarBadge.background": "${color1}",
+		"activityBarBadge.foreground": "${color15}",
+		"badge.background": "${color1}",
+		"badge.foreground": "${color15}",
+		"banner.iconForeground": "${color1}",
+		"button.background": "${gray4}",
+		"button.border": "${color15}12",
+		"button.foreground": "${foreground}",
+		"button.hoverBackground": "${color8}",
+		"button.secondaryBackground": "${gray5}",
+		"button.secondaryForeground": "${foreground}",
+		"button.secondaryHoverBackground": "${color8}",
+		"checkbox.background": "${gray3}",
+		"checkbox.border": "${color8}",
+		"checkbox.disabled.background": "${background}",
+		"checkbox.disabled.foreground": "${color8}",
+		"checkbox.foreground": "${color15}",
+		"debugToolBar.background": "${color0}",
+		"descriptionForeground": "${color8}",
+		"disabledForeground": "${color8}",
+		"dropdown.background": "${gray3}",
+		"dropdown.border": "${color8}",
+		"dropdown.foreground": "${foreground}",
+		"dropdown.listBackground": "${gray3}",
+		"editor.background": "${background}",
+		"editor.findMatchBackground": "${color2}99",
+		"editor.findMatchForeground": "${color15}",
+		"editor.findMatchHighlightBackground": "${color2}33",
+		"editor.findMatchHighlightForeground": "${color15}66",
+		"editor.findRangeHighlightBackground": "${selection_background}66",
+		"editor.foreground": "${foreground}",
+		"editor.hoverHighlightBackground": "${selection_background}99",
+		"editor.inactiveSelectionBackground": "${selection_background}66",
+		"editor.lineHighlightBackground": "${gray3}66",
+		"editor.lineHighlightBorder": "${gray3}66",
+		"editor.selectionBackground": "${selection_background}",
+		"editor.selectionForeground": "${selection_foreground}",
+		"editor.selectionHighlightBackground": "${selection_background}99",
+		"editor.selectionHighlightBorder": "${selection_background}",
+		"editor.wordHighlightBackground": "${selection_background}66",
+		"editor.wordHighlightBorder": "${color8}",
+		"editor.wordHighlightStrongBackground": "${selection_background}99",
+		"editor.wordHighlightStrongBorder": "${color9}",
+		"editor.wordHighlightTextBackground": "${selection_background}66",
+		"editor.wordHighlightTextBorder": "${selection_background}",
+		"editorCursor.background": "${cursor_text_color}",
+		"editorCursor.foreground": "${cursor}",
+		"editorGroup.border": "${gray5}",
+		"editorGroup.emptyBackground": "${background}",
+		"editorGroupHeader.border": "${gray3}",
+		"editorGroupHeader.tabsBackground": "${background}",
+		"editorGroupHeader.tabsBorder": "${gray4}",
+		"editorGutter.addedBackground": "${color2}",
+		"editorGutter.deletedBackground": "${color1}",
+		"editorGutter.modifiedBackground": "${color4}",
+		"editorIndentGuide.activeBackground1": "${gray5}",
+		"editorIndentGuide.background1": "${gray3}",
+		"editorLineNumber.activeForeground": "${color3}",
+		"editorLineNumber.dimmedForeground": "${gray4}",
+		"editorLineNumber.foreground": "${color8}",
+		"editorMultiCursor.primary.background": "${cursor_text_color}",
+		"editorMultiCursor.primary.foreground": "${cursor}",
+		"editorMultiCursor.secondary.background": "${cursor_text_color}",
+		"editorMultiCursor.secondary.foreground": "${color3}",
+		"editorOverviewRuler.border": "${gray0}",
+		"editorWhitespace.foreground": "${gray4}",
+		"editorWidget.background": "${gray2}",
+		"editorWidget.border": "${gray4}",
+		"errorForeground": "${color1}",
+		"focusBorder": "${gray5}",
+		"foreground": "${foreground}",
+		"icon.foreground": "${color8}",
+		"input.background": "${gray3}",
+		"input.border": "${color8}",
+		"input.foreground": "${foreground}",
+		"input.placeholderForeground": "${gray7}",
+		"inputOption.activeBackground": "${color8}",
+		"inputOption.activeBorder": "${color8}",
+		"inputOption.activeForeground": "${color15}",
+		"inputValidation.errorBorder": "${color1}",
+		"inputValidation.errorForeground": "${color15}",
+		"inputValidation.infoBorder": "${color4}",
+		"inputValidation.infoForeground": "${color15}",
+		"inputValidation.warningBorder": "${color3}",
+		"inputValidation.warningForeground": "${color15}",
+		"keybindingLabel.foreground": "${color7}",
+		"list.activeSelectionBackground": "${gray5}",
+		"list.activeSelectionForeground": "${selection_foreground}",
+		"list.activeSelectionIconForeground": "${color15}",
+		"list.focusHighlightForeground": "${color9}",
+		"list.highlightForeground": "${color9}",
+		"list.hoverBackground": "${gray4}",
+		"list.hoverForeground": "${color15}",
+		"list.inactiveSelectionBackground": "${gray3}",
+		"list.inactiveSelectionForeground": "${selection_foreground}",
+		"notificationCenterHeader.background": "${color0}",
+		"notificationCenterHeader.foreground": "${color7}",
+		"notifications.background": "${color0}",
+		"notifications.border": "${gray2}",
+		"notifications.foreground": "${color7}",
+		"panel.background": "${color0}",
+		"panel.border": "${gray3}",
+		"panelInput.border": "${gray2}",
+		"panelTitle.activeBorder": "${color1}",
+		"panelTitle.activeForeground": "${color15}",
+		"panelTitle.inactiveForeground": "${gray8}",
+		"pickerGroup.border": "${gray2}",
+		"pickerGroup.foreground": "${color1}",
+		"ports.iconRunningProcessForeground": "${color2}",
+		"progressBar.background": "${gray3}",
+		"quickInput.background": "${color0}",
+		"quickInput.foreground": "${color7}",
+		"sash.hoverBorder": "${foreground}",
+		"search.resultsInfoForeground": "${color8}",
+		"searchEditor.findMatchBackground": "${color2}66",
+		"searchEditor.textInputBorder": "${color8}",
+		"selection.background": "${gray5}",
+		"settings.dropdownBackground": "${gray3}",
+		"settings.dropdownBorder": "${color8}",
+		"settings.headerForeground": "${color15}",
+		"settings.modifiedItemIndicator": "${color3}",
+		"sideBar.background": "${color0}",
+		"sideBar.border": "${gray3}",
+		"sideBar.foreground": "${color7}",
+		"sideBarSectionHeader.background": "${background}",
+		"sideBarSectionHeader.border": "${gray2}",
+		"sideBarSectionHeader.foreground": "${color7}",
+		"sideBarTitle.foreground": "${color7}",
+		"statusBar.background": "${color0}",
+		"statusBar.border": "${gray2}",
+		"statusBar.debuggingBackground": "${color4}",
+		"statusBar.debuggingForeground": "${color15}",
+		"statusBar.focusBorder": "${color4}",
+		"statusBar.foreground": "${color7}",
+		"statusBar.noFolderBackground": "${color0}",
+		"statusBarItem.focusBorder": "${color4}",
+		"statusBarItem.hoverBackground": "${gray3}",
+		"statusBarItem.hoverForeground": "${color15}",
+		"statusBarItem.prominentBackground": "${color3}",
+		"statusBarItem.prominentForeground": "${color0}",
+		"statusBarItem.prominentHoverBackground": "${color11}",
+		"statusBarItem.remoteBackground": "${color3}",
+		"statusBarItem.remoteForeground": "${gray0}",
+		"tab.activeBackground": "${background}",
+		"tab.activeBorder": "${color1}",
+		"tab.activeBorderTop": "${gray5}",
+		"tab.activeForeground": "${color15}",
+		"tab.border": "${color0}",
+		"tab.hoverBackground": "${color0}",
+		"tab.hoverBorder": "${color3}",
+		"tab.inactiveBackground": "${color0}",
+		"tab.inactiveForeground": "${gray8}",
+		"tab.lastPinnedBorder": "${gray4}",
+		"tab.selectedBackground": "${gray2}",
+		"tab.selectedBorderTop": "${color1}",
+		"tab.selectedForeground": "${color15}a0",
+		"tab.unfocusedActiveBorder": "${color0}",
+		"tab.unfocusedActiveBorderTop": "${gray5}",
+		"tab.unfocusedHoverBackground": "${color0}",
+		"terminal.ansiBlack": "${color0}",
+		"terminal.ansiBlue": "${color4}",
+		"terminal.ansiBrightBlack": "${color8}",
+		"terminal.ansiBrightBlue": "${color12}",
+		"terminal.ansiBrightCyan": "${color14}",
+		"terminal.ansiBrightGreen": "${color10}",
+		"terminal.ansiBrightMagenta": "${color13}",
+		"terminal.ansiBrightRed": "${color9}",
+		"terminal.ansiBrightWhite": "${color15}",
+		"terminal.ansiBrightYellow": "${color11}",
+		"terminal.ansiCyan": "${color6}",
+		"terminal.ansiGreen": "${color2}",
+		"terminal.ansiMagenta": "${color5}",
+		"terminal.ansiRed": "${color1}",
+		"terminal.ansiWhite": "${foreground}",
+		"terminal.ansiYellow": "${color3}",
+		"terminal.background": "${background}",
+		"terminal.foreground": "${foreground}",
+		"terminal.inactiveSelectionBackground": "${selection_background}66",
+		"terminal.tab.activeBorder": "${color4}",
+		"terminalCursor.background": "${cursor_text_color}",
+		"terminalCursor.foreground": "${cursor}",
+		"textBlockQuote.background": "${gray2}",
+		"textBlockQuote.border": "${gray3}",
+		"textCodeBlock.background": "${gray2}",
+		"textLink.activeForeground": "${color1}",
+		"textLink.foreground": "${color9}",
+		"textPreformat.background": "${color0}",
+		"textPreformat.foreground": "${color15}",
+		"textSeparator.foreground": "${gray2}",
+		"titleBar.activeBackground": "${color0}",
+		"titleBar.activeForeground": "${color7}",
+		"titleBar.border": "${gray2}",
+		"titleBar.inactiveBackground": "${gray1}",
+		"titleBar.inactiveForeground": "${gray9}",
+		"toolbar.activeBackground": "${color1}",
+		"toolbar.hoverBackground": "${color0}",
+		"toolbar.hoverOutline": "${background}",
+		"welcomePage.progress.background": "${gray3}",
+		"welcomePage.progress.foreground": "${color3}",
+		"welcomePage.tileBackground": "${gray1}",
+		"widget.border": "${gray4}",
+		"widget.shadow": "${color0}",
+		"window.activeBorder": "${background}",
+		"window.inactiveBorder": "${color0}",
+	},
+	"tokenColors": [
+		{
+			"scope": [
+				"bold",
+				"markup.bold",
+				"markup.heading",
+				"markup.strong",
+				"strong",
+			],
+			"settings": {
+				"fontStyle": "bold",
+			}
+		},
+		{
+			"scope": [
+				"emphasis",
+				"italic",
+				"keyword.control",
+				"markup.italic.markdown",
+			],
+			"settings": {
+				"fontStyle": "italic",
+			}
+		},
+		{
+			"scope": [
+				"markup.underline",
+			],
+			"settings": {
+				"fontStyle": "underline",
+			}
+		},
+		{
+			"scope": [
+				"markup.strikethrough",
+			],
+			"settings": {
+				"fontStyle": "strikethrough",
+			}
+		},
+		{
+			"scope": [
+				"comment",
+			],
+			"settings": {
+				"foreground": "${gray7}",
+				"fontStyle": "italic",
+			}
+		},
+		{
+			"scope": [
+				"entity.name.filename.find-in-files",
+				"markup.changed",
+				"markup.list",
+				"markup.underline.link.image.markdown",
+				"markup.underline.link.markdown",
+				"string",
+			],
+			"settings": {
+				"foreground": "#e6db74",
+			}
+		},
+		{
+			"scope": [
+				"punctuation.definition.template-expression",
+				"punctuation.section.embedded",
+			],
+			"settings": {
+				"foreground": "${color1}",
+			}
+		},
+		{
+			"scope": [
+				"markup.list.numbered.markdown",
+				"markup.list.unnumbered.markdown",
+				"meta.template.expression",
+			],
+			"settings": {
+				"foreground": "${color15}",
+			}
+		},
+		{
+			"scope": [
+				"variable",
+			],
+			"settings": {
+				"foreground": "${color15}",
+				"fontStyle": "",
+			}
+		},
+		{
+			"scope": [
+				"constant.character",
+				"constant.language",
+				"constant.numeric",
+				"constant.other",
+				"string.other.link.description.markdown",
+				"string.other.link.title.markdown",
+			],
+			"settings": {
+				"foreground": "#ae81ff",
+			}
+		},
+		{
+			"scope": [
+				"entity.name.tag",
+				"storage",
+			],
+			"settings": {
+				"foreground": "${color1}",
+				"fontStyle": "",
+			}
+		},
+		{
+			"scope": [
+				"keyword",
+				"markup.deleted",
+				"markup.quote",
+			],
+			"settings": {
+				"foreground": "${color1}",
+			}
+		},
+		{
+			"scope": [
+				"storage.type",
+				"variable.language",
+			],
+			"settings": {
+				"foreground": "${color14}",
+				"fontStyle": "italic",
+			}
+		},
+		{
+			"scope": [
+				"support.class",
+				"support.constant",
+				"support.function",
+				"support.type",
+			],
+			"settings": {
+				"foreground": "${color14}",
+				"fontStyle": "",
+			}
+		},
+		{
+			"scope": [
+				"markup.bold",
+				"markup.italic",
+			],
+			"settings": {
+				"foreground": "${color14}",
+			}
+		},
+		{
+			"scope": [
+				"storage.modifier",
+			],
+			"settings": {
+				"fontStyle": "italic",
+			}
+		},
+		{
+			"scope": [
+				"entity.name.class",
+				"entity.name.function",
+				"entity.name.namespace",
+				"entity.name.scope-resolution",
+				"entity.name.type",
+				"markup.heading.setext",
+			],
+			"settings": {
+				"foreground": "${color2}",
+				"fontStyle": "",
+			}
+		},
+		{
+			"scope": [
+				"entity.other.attribute-name",
+			],
+			"settings": {
+				"foreground": "${color2}",
+				"fontStyle": "italic",
+			}
+		},
+		{
+			"scope": [
+				"entity.other.inherited-class",
+				"markup.heading",
+				"markup.inserted",
+				"punctuation.definition.list.begin.markdown",
+			],
+			"settings": {
+				"foreground": "${color2}",
+			}
+		},
+		{
+			"scope": [
+				"markup.inline.raw",
+				"variable.parameter",
+			],
+			"settings": {
+				"foreground": "${color3}",
+				"fontStyle": "",
+			}
+		},
+		{
+			"scope": [
+				"support.other.variable",
+			],
+			"settings": {
+				"fontStyle": "",
+			}
+		},
+		{
+			"scope": [
+				"meta.structure.dictionary.json",
+				"string.quoted.double.json",
+			],
+			"settings": {
+				"foreground": "${foreground}",
+			}
+		},
+		{
+			"scope": [
+				"meta.diff",
+			],
+			"settings": {
+				"foreground": "${gray9}",
+			}
+		},
+		{
+			"scope": [
+				"markup.quote.markdown",
+			],
+			"settings": {
+				"foreground": "${gray9}",
+				"fontStyle": "italic",
+			}
+		},
+		{
+			"scope": [
+				"token.info-token",
+			],
+			"settings": {
+				"foreground": "${color12}",
+			}
+		},
+		{
+			"scope": [
+				"token.warn-token",
+			],
+			"settings": {
+				"foreground": "${color3}",
+			}
+		},
+		{
+			"scope": [
+				"invalid",
+				"token.error-token",
+			],
+			"settings": {
+				"foreground": "#f44747",
+			}
+		},
+		{
+			"scope": [
+				"token.debug-token",
+			],
+			"settings": {
+				"foreground": "#ae81ff",
+			}
+		},
+	],
+}

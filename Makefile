@@ -12,6 +12,7 @@ TARGETS = \
 	out/vivaldi.zip \
 
 ENVSUBST_TARGETS = \
+	out/vscode-color-theme.json \
 	out/vscode-terminal.json \
 
 ALL_TARGETS = $(TARGETS) $(ENVSUBST_TARGETS) \
@@ -29,6 +30,7 @@ check: all
 	unzip -l out/vivaldi.zip | grep -Fq 'settings.json'
 	grep -Fq '#fd971f' out/vscode-terminal.json
 	grep -Fq '"colorWindowBg": "#1e1f1c",' tmp/vivaldi/settings.json
+	grep -Fq '"badge.background": "#f92672",' out/vscode-color-theme.json
 	@printf "\n\e[32;1mAll tests passed.\e[m\n\n"
 
 clean:
@@ -77,4 +79,7 @@ out/vivaldi.zip: tmp/vivaldi/settings.json Makefile
 
 $(ENVSUBST_TARGETS): $(SOURCE) Makefile out/ax-monokai.inc.sh
 	mkdir -p "$(@D)"
-	bash -eu -o pipefail -c '. out/ax-monokai.inc.sh && cat assets/$(@F) | envsubst' >"$@"
+	bash -eu -o pipefail -c '. out/ax-monokai.inc.sh && cat assets/$(@F) | schema='\\\$$schema' envsubst' >"$@"
+
+out/vscode-color-theme.json: assets/vscode-color-theme.json
+out/vscode-terminal.json: assets/vscode-terminal.json

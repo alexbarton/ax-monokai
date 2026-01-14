@@ -1,0 +1,13 @@
+.git/**
+.gitignore
+.jj/**
+.vscode-test/**
+.vscode/**
+assets/**
+AX-Monokai.conf
+Makefile
+out/*.conf
+out/*.sh
+out/*.zip
+out/vscode-terminal.json
+tmp/**
