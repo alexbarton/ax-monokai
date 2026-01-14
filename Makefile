@@ -76,6 +76,5 @@ out/vivaldi.zip: tmp/vivaldi/settings.json Makefile
 # Generic Generators
 
 $(ENVSUBST_TARGETS): $(SOURCE) Makefile out/ax-monokai.inc.sh
-	printf "# $(TARGET_HEADER_TITLE)\n" >"$@"
-	printf "# $(TARGET_HEADER_FILE)\n\n" "$@" >>"$@"
-	sh -c '. out/ax-monokai.inc.sh && cat assets/$(@F) | envsubst' >>"$@"
+	mkdir -p "$(@D)"
+	bash -eu -o pipefail -c '. out/ax-monokai.inc.sh && cat assets/$(@F) | envsubst' >"$@"
