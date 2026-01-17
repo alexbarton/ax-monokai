@@ -34,10 +34,10 @@ check: all
 	@printf "\n\e[32;1mAll tests passed.\e[m\n\n"
 
 clean:
-	rm -fv $(TARGETS)
-	rm -frv tmp out
+	rm -fv $(ALL_TARGETS)
 
 distclean: clean
+	rm -frv tmp out
 
 maintainer-clean: distclean
 
