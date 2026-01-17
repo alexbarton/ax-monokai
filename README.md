@@ -61,19 +61,42 @@ Color    | Comment
 
 ## Installation
 
+1. All core definitions of the *AX-Monokai* theme are stored in a somewhat
+   generic format in the `AX-Monokai.conf` file.
+2. A `Makefile` for the `make` command is used to generate all theme files in
+   the `out/` directory.
+3. You *manually* install the themes or theme snippets from the `out/` directory
+   into your local configuration files and folders as you like.
+
+Therefore you have to:
+
+1. Get the code :-)
+2. Run `make`
+3. Find the generated files from the `out/` directory
+4. Copy the ones you need into your local configuration.
+
+More detailed notes for some targets are outlined below.
+
 ### VS Code
 
 Prerequisites:
 
+- [VS Code Extension Manager](https://github.com/microsoft/vscode-vsce)
+
 ```bash
 npm install -g @vscode/vsce
-npm up
 ```
 
 Build and package the extension:
 
 ```bash
+# Update the version number in "package.json" as needed. Then:
 make check
 vsce package -o out/
+```
+
+Install the VS Code extension locally on your machine:
+
+```bash
 code --install-extension out/ax-monokai-${version}.vsix
 ```
