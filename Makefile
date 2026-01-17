@@ -3,6 +3,8 @@
 # AX-Monokai Makefile
 #
 
+VERSION = $(shell grep -F '"version":' package.json | cut -d'"' -f4)
+
 SOURCE = AX-Monokai.conf
 
 TARGETS = \
@@ -15,6 +17,9 @@ ENVSUBST_TARGETS = \
 	out/vscode-color-theme.json \
 	out/vscode-terminal.json \
 
+OPTIONAL_TARGETS = \
+	out/ax-monokai-$(VERSION).vsix \
+
 ALL_TARGETS = $(TARGETS) $(ENVSUBST_TARGETS) \
 	tmp/vivaldi/settings.json \
 
@@ -22,6 +27,10 @@ TARGET_HEADER_TITLE = Alex' Monokai Color Scheme: AX-Monokai
 TARGET_HEADER_FILE = Generated file ($(SOURCE) -> %s), do not edit!
 
 all: $(TARGETS) $(ENVSUBST_TARGETS)
+
+optional: $(OPTIONAL_TARGETS)
+
+everything: all optional
 
 check: all
 	grep -Fq 'export cursor="#ff5820"' out/ax-monokai.inc.sh
@@ -35,6 +44,7 @@ check: all
 
 clean:
 	rm -fv $(ALL_TARGETS)
+	rm -fr $(OPTIONAL_TARGETS)
 
 distclean: clean
 	rm -frv tmp out
@@ -83,3 +93,18 @@ $(ENVSUBST_TARGETS): $(SOURCE) Makefile out/ax-monokai.inc.sh
 
 out/vscode-color-theme.json: assets/vscode-color-theme.json
 out/vscode-terminal.json: assets/vscode-terminal.json
+
+# VS Code
+
+vscode: out/ax-monokai-$(VERSION).vsix
+
+out/ax-monokai-$(VERSION).vsix: out/vscode-color-theme.json
+	vsce package -o out/ax-monokai-$(VERSION).vsix
+
+vscode-install: out/ax-monokai-$(VERSION).vsix
+	code --install-extension out/ax-monokai-$(VERSION).vsix
+
+vscode-publish: out/ax-monokai-$(VERSION).vsix
+	vsce publish
+
+.PHONY: vscode-install vscode-publish
