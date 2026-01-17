@@ -3,7 +3,7 @@
   "displayName": "AX-Monokai",
   "description": "AX-Monokai color theme for VS Code",
   "publisher": "alex-barton",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "repository": {
     "type": "git",
     "url": "https://github.com/alexbarton/ax-monokai.git"
