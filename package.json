@@ -22,7 +22,7 @@
   ],
   "icon": "images/logo.png",
   "galleryBanner": {
-    "color": "#f00",
+    "color": "#272822",
     "theme": "dark"
   },
   "pricing": "Free",
