@@ -1,7 +1,7 @@
 {
   "name": "ax-monokai",
   "displayName": "AX-Monokai",
-  "description": "AX-Monokai color theme for VS Code",
+  "description": "Monokai-inspired color theme for VS Code.",
   "publisher": "alex-barton",
   "version": "0.0.2",
   "repository": {
@@ -9,11 +9,23 @@
     "url": "https://github.com/alexbarton/ax-monokai.git"
   },
   "engines": {
-    "vscode": "^1.108.0"
+    "vscode": "^1.86.0"
   },
   "categories": [
     "Themes"
   ],
+  "keywords": [
+    "monokai",
+    "molokai",
+    "theme",
+    "dark"
+  ],
+  "icon": "images/logo.png",
+  "galleryBanner": {
+    "color": "#f00",
+    "theme": "dark"
+  },
+  "pricing": "Free",
   "contributes": {
     "themes": [
       {
