@@ -26,6 +26,8 @@ ALL_TARGETS = $(TARGETS) $(ENVSUBST_TARGETS) \
 TARGET_HEADER_TITLE = Alex' Monokai Color Scheme: AX-Monokai
 TARGET_HEADER_FILE = Generated file ($(SOURCE) -> %s), do not edit!
 
+VSCE_OPTIONS = --readme-path VSCode.md
+
 all: $(TARGETS) $(ENVSUBST_TARGETS)
 
 optional: $(OPTIONAL_TARGETS)
@@ -99,12 +101,12 @@ out/vscode-terminal.json: assets/vscode-terminal.json
 vscode: out/ax-monokai-$(VERSION).vsix
 
 out/ax-monokai-$(VERSION).vsix: out/vscode-color-theme.json
-	vsce package --readme-path VSCode.md -o out/ax-monokai-$(VERSION).vsix
+	vsce package $(VSCE_OPTIONS) -o out/ax-monokai-$(VERSION).vsix
 
 vscode-install: out/ax-monokai-$(VERSION).vsix
 	code --install-extension out/ax-monokai-$(VERSION).vsix
 
-vscode-publish: out/ax-monokai-$(VERSION).vsix
-	vsce publish
+vscode-publish: out/vscode-color-theme.json
+	vsce publish $(VSCE_OPTIONS)
 
 .PHONY: vscode-install vscode-publish
