@@ -8,6 +8,15 @@ Based on this file, the project provides a `Makefile` that can automatically
 generate configuration files for a wide range of applications, including
 terminal emulators, text editors, web browsers, and more.
 
+## Supported Output Formats
+
+- Ghostty (`out/ghostty.conf`)
+- Kitty (`out/kitty.conf`)
+- POSIX Shell (`out/ax-monokai.inc.sh`)
+- Vivaldi (`out/vivaldi.zip`)
+- VS Code (`out/ax-monokai-<version>.vsix`, `out/vscode-color-theme.json`)
+- VS Code terminal (`out/vscode-terminal.json`)
+
 ## Colors
 
 ### Color palette
