@@ -10,4 +10,5 @@ out/*.conf
 out/*.sh
 out/*.zip
 out/vscode-terminal.json
+README.md
 tmp/**

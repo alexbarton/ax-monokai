@@ -79,6 +79,11 @@ More detailed notes for some targets are outlined below.
 
 ### VS Code
 
+The theme extension is available in the
+[Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=alex-barton.ax-monokai).
+
+This section describes how you can build it yourself.
+
 Prerequisites:
 
 - [VS Code Extension Manager](https://github.com/microsoft/vscode-vsce)
@@ -87,12 +92,11 @@ Prerequisites:
 npm install -g @vscode/vsce
 ```
 
-Build and package the extension:
+Build and package the extension, it will be stored in the `out/` directory:
 
 ```bash
 # Update the version number in "package.json" as needed. Then:
-make check
-vsce package -o out/
+make check vscode
 ```
 
 Install the VS Code extension locally on your machine:

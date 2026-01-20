@@ -99,7 +99,7 @@ out/vscode-terminal.json: assets/vscode-terminal.json
 vscode: out/ax-monokai-$(VERSION).vsix
 
 out/ax-monokai-$(VERSION).vsix: out/vscode-color-theme.json
-	vsce package -o out/ax-monokai-$(VERSION).vsix
+	vsce package --readme-path VSCode.md -o out/ax-monokai-$(VERSION).vsix
 
 vscode-install: out/ax-monokai-$(VERSION).vsix
 	code --install-extension out/ax-monokai-$(VERSION).vsix
