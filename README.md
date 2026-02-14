@@ -10,6 +10,7 @@ terminal emulators, text editors, web browsers, and more.
 
 ## Supported Output Formats
 
+- CSV (out/ax-monokai.csv)
 - Ghostty (`out/ghostty.conf`)
 - Kitty (`out/kitty.conf`)
 - POSIX Shell (`out/ax-monokai.inc.sh`)

@@ -5,9 +5,12 @@
 
 VERSION = $(shell grep -F '"version":' package.json | cut -d'"' -f4)
 
+SHELL = bash
+
 SOURCE = AX-Monokai.conf
 
 TARGETS = \
+	out/ax-monokai.csv \
 	out/ax-monokai.inc.sh \
 	out/ghostty.conf \
 	out/kitty.conf \
@@ -35,6 +38,7 @@ optional: $(OPTIONAL_TARGETS)
 everything: all optional
 
 check: all
+	grep -Fq 'color15, #f5f4f1, f5, f4, f1, 245, 244, 241' out/ax-monokai.csv
 	grep -Fq 'export cursor="#ff5820"' out/ax-monokai.inc.sh
 	grep -Fq 'palette = 13=#fb87ff' out/ghostty.conf
 	grep -Fq 'selection_background #0a5d78' out/kitty.conf
@@ -56,6 +60,14 @@ maintainer-clean: distclean
 .PHONY: all check clean distclean maintainer-clean
 
 # Generators
+
+out/ax-monokai.csv: $(SOURCE) Makefile
+	echo "name, #hex_rgb, hex_r, hex_g, hex_b, dec_r, dec_g, dec_b" >"$@"
+	grep -E "^[a-z]" $(SOURCE) | grep -Fv . | \
+		while read name color; do \
+			r=$$(echo $$color | cut -c2-3); g=$$(echo $$color | cut -c4-5); b=$$(echo $$color | cut -c6-7); \
+			echo "$$name, $$color, $$r, $$g, $$b, $$((16#$$r)), $$((16#$$g)), $$((16#$$b))"; \
+		done >>"$@"
 
 out/ax-monokai.inc.sh: $(SOURCE) Makefile
 	mkdir -p "$(@D)"
