@@ -31,7 +31,7 @@ TARGET_HEADER_FILE = Generated file ($(SOURCE) -> %s), do not edit!
 
 VSCE_OPTIONS = --readme-path VSCode.md
 
-all: $(TARGETS) $(ENVSUBST_TARGETS)
+all: $(ALL_TARGETS)
 
 optional: $(OPTIONAL_TARGETS)
 
