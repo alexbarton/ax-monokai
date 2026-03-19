@@ -39,7 +39,7 @@ everything: all optional
 
 check: all
 	grep -Fq 'color15, #f5f4f1, f5, f4, f1, 245, 244, 241' out/ax-monokai.csv
-	grep -Fq 'export cursor="#ff5820"' out/ax-monokai.inc.sh
+	grep -Fq 'export cursor="ff5820"' out/ax-monokai.inc.sh
 	grep -Fq 'palette = 13=#fb87ff' out/ghostty.conf
 	grep -Fq 'selection_background #0a5d78' out/kitty.conf
 	unzip -l out/vivaldi.zip | grep -Fq 'settings.json'
@@ -73,7 +73,7 @@ out/ax-monokai.inc.sh: $(SOURCE) Makefile
 	mkdir -p "$(@D)"
 	printf "# $(TARGET_HEADER_TITLE)\n" >"$@"
 	printf "# $(TARGET_HEADER_FILE)\n\n" "$@" >>"$@"
-	sed -En -e 's/^([_[:alnum:]]*) (.*)$$/export \1="\2"/p' "$(SOURCE)" >>"$@"
+	sed -En -e 's/^([_[:alnum:]]*) #?(.*)$$/export \1="\2"/p' "$(SOURCE)" >>"$@"
 
 out/ghostty.conf: $(SOURCE) Makefile
 	mkdir -p "$(@D)"
