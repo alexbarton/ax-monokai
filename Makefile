@@ -65,6 +65,7 @@ maintainer-clean: distclean
 # Generators
 
 out/ax-monokai.csv: $(SOURCE) Makefile
+	mkdir -p "$(@D)"
 	echo "name, #hex_rgb, hex_r, hex_g, hex_b, dec_r, dec_g, dec_b" >"$@"
 	grep -E "^[a-z]" $(SOURCE) | grep -Fv . | \
 		while read name color; do \
@@ -100,6 +101,7 @@ tmp/vivaldi/settings.json: $(SOURCE) Makefile out/ax-monokai.inc.sh
 	sh -c '. out/ax-monokai.inc.sh && cat assets/vivaldi.json | envsubst' >>"$@"
 
 out/vivaldi.zip: tmp/vivaldi/settings.json Makefile
+	mkdir -p "$(@D)"
 	zip -j out/vivaldi.zip tmp/vivaldi/settings.json
 
 # Generic Generators
@@ -122,6 +124,7 @@ out/vscode-terminal.json: assets/vscode-terminal.json
 vscode: out/ax-monokai-$(VERSION).vsix
 
 out/ax-monokai-$(VERSION).vsix: out/vscode-color-theme.json
+	mkdir -p "$(@D)"
 	vsce package $(VSCE_OPTIONS) -o out/ax-monokai-$(VERSION).vsix
 
 vscode-install: out/ax-monokai-$(VERSION).vsix
