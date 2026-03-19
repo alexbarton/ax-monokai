@@ -20,10 +20,13 @@ ENVSUBST_TARGETS = \
 	out/vscode-color-theme.json \
 	out/vscode-terminal.json \
 
+ENVSUBST_TARGETS_INI = \
+	out/foot.ini \
+
 OPTIONAL_TARGETS = \
 	out/ax-monokai-$(VERSION).vsix \
 
-ALL_TARGETS = $(TARGETS) $(ENVSUBST_TARGETS) \
+ALL_TARGETS = $(TARGETS) $(ENVSUBST_TARGETS) $(ENVSUBST_TARGETS_INI) \
 	tmp/vivaldi/settings.json \
 
 TARGET_HEADER_TITLE = Alex' Monokai Color Scheme: AX-Monokai
@@ -104,6 +107,12 @@ out/vivaldi.zip: tmp/vivaldi/settings.json Makefile
 $(ENVSUBST_TARGETS): $(SOURCE) Makefile out/ax-monokai.inc.sh
 	mkdir -p "$(@D)"
 	bash -eu -o pipefail -c '. out/ax-monokai.inc.sh && cat assets/$(@F) | schema='\\\$$schema' envsubst' >"$@"
+
+$(ENVSUBST_TARGETS_INI): $(SOURCE) Makefile out/ax-monokai.inc.sh
+	mkdir -p "$(@D)"
+	printf "# $(TARGET_HEADER_TITLE)\n" >"$@"
+	printf "# $(TARGET_HEADER_FILE)\n\n" "$@" >>"$@"
+	bash -eu -o pipefail -c '. out/ax-monokai.inc.sh && cat assets/$(@F) | envsubst' >>"$@"
 
 out/vscode-color-theme.json: assets/vscode-color-theme.json
 out/vscode-terminal.json: assets/vscode-terminal.json
