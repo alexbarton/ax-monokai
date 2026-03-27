@@ -119,6 +119,8 @@ $(ENVSUBST_TARGETS_INI): $(SOURCE) Makefile out/ax-monokai.inc.sh
 out/vscode-color-theme.json: assets/vscode-color-theme.json
 out/vscode-terminal.json: assets/vscode-terminal.json
 
+out/foot.ini: assets/foot.ini
+
 # VS Code
 
 vscode: out/ax-monokai-$(VERSION).vsix
