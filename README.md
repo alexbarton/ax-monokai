@@ -10,7 +10,8 @@ terminal emulators, text editors, web browsers, and more.
 
 ## Supported Output Formats
 
-- CSV (out/ax-monokai.csv)
+- CSV (`out/ax-monokai.csv`)
+- foot (`out/foot.ini`)
 - Ghostty (`out/ghostty.conf`)
 - Kitty (`out/kitty.conf`)
 - POSIX Shell (`out/ax-monokai.inc.sh`)
@@ -52,7 +53,7 @@ The following 16 grayscale levels are defined:
 | #787b72 | -
 | #868981 | -
 | #969791 | -
-| #a4a5a0 | -
+| #a5a5a0 | -
 | #b2b3af | -
 | #c2c2bf | foreground
 | #d3d2cf | -
