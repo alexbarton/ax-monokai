@@ -98,7 +98,7 @@ out/kitty.conf: $(SOURCE) Makefile
 
 tmp/vivaldi/settings.json: $(SOURCE) Makefile out/ax-monokai.inc.sh
 	mkdir -p "$(@D)"
-	sh -c '. out/ax-monokai.inc.sh && cat assets/vivaldi.json | envsubst' >>"$@"
+	sh -c '. out/ax-monokai.inc.sh && cat assets/vivaldi.json | envsubst' >"$@"
 
 out/vivaldi.zip: tmp/vivaldi/settings.json Makefile
 	mkdir -p "$(@D)"
