@@ -16,8 +16,8 @@ read -ra sed_args <<<"$(grep '^[a-z]' AX-Monokai.conf | sort |
 	while read -r def
 do
 	var="${def%% *}"
-	val="${def##* }"; val="${val##*#}"
-	printf -- "-e s/%s/\\\$%s/g " "${val}" "${var}"
+	val="${def##* }"; val="${val##*#}"; val="${val//./\\.}"
+	printf -- "-e s/%s/\\\${%s}/g " "${val}" "${var}"
 done)"
 
 sed "${sed_args[@]}" "$1"
