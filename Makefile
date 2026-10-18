@@ -60,7 +60,7 @@ distclean: clean
 
 maintainer-clean: distclean
 
-.PHONY: all check clean distclean maintainer-clean
+.PHONY: all check clean distclean maintainer-clean palette
 
 # Generators
 
@@ -103,6 +103,11 @@ tmp/vivaldi/settings.json: $(SOURCE) Makefile out/ax-monokai.inc.sh
 out/vivaldi.zip: tmp/vivaldi/settings.json Makefile
 	mkdir -p "$(@D)"
 	zip -j out/vivaldi.zip tmp/vivaldi/settings.json
+
+images/palette.svg: $(SOURCE) palette-svg.sh
+	./palette-svg.sh "$(SOURCE)" >"$@"
+
+palette: images/palette.svg
 
 # Generic Generators
 

@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Alex' Monokai Color Scheme: AX-Monokai -->
+<!-- Generated file (AX-Monokai.conf -> palette.svg), do not edit! -->
+<svg xmlns="http://www.w3.org/2000/svg" width="936" height="512" viewBox="0 0 936 512">
+  <style>
+    text { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+    .h { fill: #c2c2bf; font-size: 15px; font-weight: bold; }
+    .l { font-size: 12px; opacity: 0.8; }
+    .v { font-size: 13px; }
+  </style>
+  <rect width="100%" height="100%" rx="10" fill="#272822"/>
+  <text x="24" y="32" class="h">ANSI colors (regular)</text>
+  <rect x="24" y="44" width="104" height="56" rx="6" fill="#1e1f1c" stroke="#414339"/>
+  <text x="32" y="64" fill="#f5f4f1" class="l">0 black</text>
+  <text x="32" y="90" fill="#f5f4f1" class="v">#1e1f1c</text>
+  <rect x="136" y="44" width="104" height="56" rx="6" fill="#f92672" stroke="#414339"/>
+  <text x="144" y="64" fill="#f5f4f1" class="l">1 red</text>
+  <text x="144" y="90" fill="#f5f4f1" class="v">#f92672</text>
+  <rect x="248" y="44" width="104" height="56" rx="6" fill="#a6e22e" stroke="#414339"/>
+  <text x="256" y="64" fill="#1e1f1c" class="l">2 green</text>
+  <text x="256" y="90" fill="#1e1f1c" class="v">#a6e22e</text>
+  <rect x="360" y="44" width="104" height="56" rx="6" fill="#fd971f" stroke="#414339"/>
+  <text x="368" y="64" fill="#1e1f1c" class="l">3 yellow</text>
+  <text x="368" y="90" fill="#1e1f1c" class="v">#fd971f</text>
+  <rect x="472" y="44" width="104" height="56" rx="6" fill="#2c64e0" stroke="#414339"/>
+  <text x="480" y="64" fill="#f5f4f1" class="l">4 blue</text>
+  <text x="480" y="90" fill="#f5f4f1" class="v">#2c64e0</text>
+  <rect x="584" y="44" width="104" height="56" rx="6" fill="#f94cff" stroke="#414339"/>
+  <text x="592" y="64" fill="#1e1f1c" class="l">5 magenta</text>
+  <text x="592" y="90" fill="#1e1f1c" class="v">#f94cff</text>
+  <rect x="696" y="44" width="104" height="56" rx="6" fill="#16b1cf" stroke="#414339"/>
+  <text x="704" y="64" fill="#f5f4f1" class="l">6 cyan</text>
+  <text x="704" y="90" fill="#f5f4f1" class="v">#16b1cf</text>
+  <rect x="808" y="44" width="104" height="56" rx="6" fill="#c2c2bf" stroke="#414339"/>
+  <text x="816" y="64" fill="#1e1f1c" class="l">7 white</text>
+  <text x="816" y="90" fill="#1e1f1c" class="v">#c2c2bf</text>
+  <text x="24" y="140" class="h">ANSI colors (bright)</text>
+  <rect x="24" y="152" width="104" height="56" rx="6" fill="#6a6d63" stroke="#414339"/>
+  <text x="32" y="172" fill="#f5f4f1" class="l">8 br black</text>
+  <text x="32" y="198" fill="#f5f4f1" class="v">#6a6d63</text>
+  <rect x="136" y="152" width="104" height="56" rx="6" fill="#fb6ea1" stroke="#414339"/>
+  <text x="144" y="172" fill="#1e1f1c" class="l">9 br red</text>
+  <text x="144" y="198" fill="#1e1f1c" class="v">#fb6ea1</text>
+  <rect x="248" y="152" width="104" height="56" rx="6" fill="#c3ec73" stroke="#414339"/>
+  <text x="256" y="172" fill="#1e1f1c" class="l">10 br green</text>
+  <text x="256" y="198" fill="#1e1f1c" class="v">#c3ec73</text>
+  <rect x="360" y="152" width="104" height="56" rx="6" fill="#feb969" stroke="#414339"/>
+  <text x="368" y="172" fill="#1e1f1c" class="l">11 br yellow</text>
+  <text x="368" y="198" fill="#1e1f1c" class="v">#feb969</text>
+  <rect x="472" y="152" width="104" height="56" rx="6" fill="#7297ea" stroke="#414339"/>
+  <text x="480" y="172" fill="#1e1f1c" class="l">12 br blue</text>
+  <text x="480" y="198" fill="#1e1f1c" class="v">#7297ea</text>
+  <rect x="584" y="152" width="104" height="56" rx="6" fill="#fb87ff" stroke="#414339"/>
+  <text x="592" y="172" fill="#1e1f1c" class="l">13 br magenta</text>
+  <text x="592" y="198" fill="#1e1f1c" class="v">#fb87ff</text>
+  <rect x="696" y="152" width="104" height="56" rx="6" fill="#66d9ef" stroke="#414339"/>
+  <text x="704" y="172" fill="#1e1f1c" class="l">14 br cyan</text>
+  <text x="704" y="198" fill="#1e1f1c" class="v">#66d9ef</text>
+  <rect x="808" y="152" width="104" height="56" rx="6" fill="#f5f4f1" stroke="#414339"/>
+  <text x="816" y="172" fill="#1e1f1c" class="l">15 br white</text>
+  <text x="816" y="198" fill="#1e1f1c" class="v">#f5f4f1</text>
+  <text x="24" y="248" class="h">Shades of gray</text>
+  <rect x="24" y="260" width="104" height="56" rx="6" fill="#090906" stroke="#414339"/>
+  <text x="32" y="280" fill="#f5f4f1" class="l">gray0</text>
+  <text x="32" y="306" fill="#f5f4f1" class="v">#090906</text>
+  <rect x="136" y="260" width="104" height="56" rx="6" fill="#1e1f1c" stroke="#414339"/>
+  <text x="144" y="280" fill="#f5f4f1" class="l">gray1</text>
+  <text x="144" y="306" fill="#f5f4f1" class="v">#1e1f1c</text>
+  <rect x="248" y="260" width="104" height="56" rx="6" fill="#272822" stroke="#414339"/>
+  <text x="256" y="280" fill="#f5f4f1" class="l">gray2</text>
+  <text x="256" y="306" fill="#f5f4f1" class="v">#272822</text>
+  <rect x="360" y="260" width="104" height="56" rx="6" fill="#3e3d32" stroke="#414339"/>
+  <text x="368" y="280" fill="#f5f4f1" class="l">gray3</text>
+  <text x="368" y="306" fill="#f5f4f1" class="v">#3e3d32</text>
+  <rect x="472" y="260" width="104" height="56" rx="6" fill="#414339" stroke="#414339"/>
+  <text x="480" y="280" fill="#f5f4f1" class="l">gray4</text>
+  <text x="480" y="306" fill="#f5f4f1" class="v">#414339</text>
+  <rect x="584" y="260" width="104" height="56" rx="6" fill="#51584e" stroke="#414339"/>
+  <text x="592" y="280" fill="#f5f4f1" class="l">gray5</text>
+  <text x="592" y="306" fill="#f5f4f1" class="v">#51584e</text>
+  <rect x="696" y="260" width="104" height="56" rx="6" fill="#6a6d63" stroke="#414339"/>
+  <text x="704" y="280" fill="#f5f4f1" class="l">gray6</text>
+  <text x="704" y="306" fill="#f5f4f1" class="v">#6a6d63</text>
+  <rect x="808" y="260" width="104" height="56" rx="6" fill="#787b72" stroke="#414339"/>
+  <text x="816" y="280" fill="#f5f4f1" class="l">gray7</text>
+  <text x="816" y="306" fill="#f5f4f1" class="v">#787b72</text>
+  <rect x="24" y="324" width="104" height="56" rx="6" fill="#868981" stroke="#414339"/>
+  <text x="32" y="344" fill="#f5f4f1" class="l">gray8</text>
+  <text x="32" y="370" fill="#f5f4f1" class="v">#868981</text>
+  <rect x="136" y="324" width="104" height="56" rx="6" fill="#969791" stroke="#414339"/>
+  <text x="144" y="344" fill="#1e1f1c" class="l">gray9</text>
+  <text x="144" y="370" fill="#1e1f1c" class="v">#969791</text>
+  <rect x="248" y="324" width="104" height="56" rx="6" fill="#a5a5a0" stroke="#414339"/>
+  <text x="256" y="344" fill="#1e1f1c" class="l">gray10</text>
+  <text x="256" y="370" fill="#1e1f1c" class="v">#a5a5a0</text>
+  <rect x="360" y="324" width="104" height="56" rx="6" fill="#b2b3af" stroke="#414339"/>
+  <text x="368" y="344" fill="#1e1f1c" class="l">gray11</text>
+  <text x="368" y="370" fill="#1e1f1c" class="v">#b2b3af</text>
+  <rect x="472" y="324" width="104" height="56" rx="6" fill="#c2c2bf" stroke="#414339"/>
+  <text x="480" y="344" fill="#1e1f1c" class="l">gray12</text>
+  <text x="480" y="370" fill="#1e1f1c" class="v">#c2c2bf</text>
+  <rect x="584" y="324" width="104" height="56" rx="6" fill="#d3d2cf" stroke="#414339"/>
+  <text x="592" y="344" fill="#1e1f1c" class="l">gray13</text>
+  <text x="592" y="370" fill="#1e1f1c" class="v">#d3d2cf</text>
+  <rect x="696" y="324" width="104" height="56" rx="6" fill="#e4e3e0" stroke="#414339"/>
+  <text x="704" y="344" fill="#1e1f1c" class="l">gray14</text>
+  <text x="704" y="370" fill="#1e1f1c" class="v">#e4e3e0</text>
+  <rect x="808" y="324" width="104" height="56" rx="6" fill="#f5f4f1" stroke="#414339"/>
+  <text x="816" y="344" fill="#1e1f1c" class="l">gray15</text>
+  <text x="816" y="370" fill="#1e1f1c" class="v">#f5f4f1</text>
+  <text x="24" y="420" class="h">Special colors</text>
+  <rect x="24" y="432" width="104" height="56" rx="6" fill="#272822" stroke="#414339"/>
+  <text x="32" y="452" fill="#f5f4f1" class="l">bg</text>
+  <text x="32" y="478" fill="#f5f4f1" class="v">#272822</text>
+  <rect x="136" y="432" width="104" height="56" rx="6" fill="#c2c2bf" stroke="#414339"/>
+  <text x="144" y="452" fill="#1e1f1c" class="l">fg</text>
+  <text x="144" y="478" fill="#1e1f1c" class="v">#c2c2bf</text>
+  <rect x="248" y="432" width="104" height="56" rx="6" fill="#ff5820" stroke="#414339"/>
+  <text x="256" y="452" fill="#f5f4f1" class="l">cursor</text>
+  <text x="256" y="478" fill="#f5f4f1" class="v">#ff5820</text>
+  <rect x="360" y="432" width="104" height="56" rx="6" fill="#f5f4f1" stroke="#414339"/>
+  <text x="368" y="452" fill="#1e1f1c" class="l">cursor text</text>
+  <text x="368" y="478" fill="#1e1f1c" class="v">#f5f4f1</text>
+  <rect x="472" y="432" width="104" height="56" rx="6" fill="#0a5d78" stroke="#414339"/>
+  <text x="480" y="452" fill="#f5f4f1" class="l">sel bg</text>
+  <text x="480" y="478" fill="#f5f4f1" class="v">#0a5d78</text>
+  <rect x="584" y="432" width="104" height="56" rx="6" fill="#e6db74" stroke="#414339"/>
+  <text x="592" y="452" fill="#1e1f1c" class="l">yellow</text>
+  <text x="592" y="478" fill="#1e1f1c" class="v">#e6db74</text>
+  <rect x="696" y="432" width="104" height="56" rx="6" fill="#f44747" stroke="#414339"/>
+  <text x="704" y="452" fill="#f5f4f1" class="l">error</text>
+  <text x="704" y="478" fill="#f5f4f1" class="v">#f44747</text>
+  <rect x="808" y="432" width="104" height="56" rx="6" fill="#ae81ff" stroke="#414339"/>
+  <text x="816" y="452" fill="#1e1f1c" class="l">purple</text>
+  <text x="816" y="478" fill="#1e1f1c" class="v">#ae81ff</text>
+</svg>
