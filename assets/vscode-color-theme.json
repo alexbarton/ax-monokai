@@ -274,7 +274,7 @@
 				"string",
 			],
 			"settings": {
-				"foreground": "#e6db74",
+				"foreground": "#${syntax_string}",
 			}
 		},
 		{
@@ -315,7 +315,7 @@
 				"string.other.link.title.markdown",
 			],
 			"settings": {
-				"foreground": "#ae81ff",
+				"foreground": "#${syntax_constant}",
 			}
 		},
 		{
@@ -477,7 +477,7 @@
 				"token.error-token",
 			],
 			"settings": {
-				"foreground": "#f44747",
+				"foreground": "#${syntax_invalid}",
 			}
 		},
 		{
@@ -485,7 +485,7 @@
 				"token.debug-token",
 			],
 			"settings": {
-				"foreground": "#ae81ff",
+				"foreground": "#${syntax_constant}",
 			}
 		},
 	],
