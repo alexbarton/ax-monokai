@@ -8,6 +8,8 @@ Based on this file, the project provides a `Makefile` that can automatically
 generate configuration files for a wide range of applications, including
 terminal emulators, text editors, web browsers, and more.
 
+![AX-Monokai color palette](images/palette.svg)
+
 ## Supported Output Formats
 
 - CSV (`out/ax-monokai.csv`)
@@ -20,6 +22,9 @@ terminal emulators, text editors, web browsers, and more.
 - VS Code terminal (`out/vscode-terminal.json`)
 
 ## Colors
+
+The palette image above is generated from `AX-Monokai.conf` by running
+`make palette`.
 
 ### Color palette
 

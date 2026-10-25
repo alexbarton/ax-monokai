@@ -6,9 +6,11 @@
 assets/**
 AX-Monokai.conf
 Makefile
+images/palette.svg
 out/*.conf
 out/*.sh
 out/*.zip
 out/vscode-terminal.json
+palette-svg.sh
 README.md
 tmp/**
