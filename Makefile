@@ -49,6 +49,8 @@ check: all
 	grep -Fq '#fd971f' out/vscode-terminal.json
 	grep -Fq '"colorWindowBg": "#1e1f1c",' tmp/vivaldi/settings.json
 	grep -Fq '"badge.background": "#f92672",' out/vscode-color-theme.json
+	grep -Fq '"foreground": "#e6db74",' out/vscode-color-theme.json
+	! grep -Fq 'syntax' out/kitty.conf out/ghostty.conf
 	@printf "\n\e[32;1mAll tests passed.\e[m\n\n"
 
 clean:
@@ -83,7 +85,7 @@ out/ghostty.conf: $(SOURCE) Makefile
 	mkdir -p "$(@D)"
 	printf "# $(TARGET_HEADER_TITLE)\n" >"$@"
 	printf "# $(TARGET_HEADER_FILE)\n\n" "$@" >>"$@"
-	grep "^[a-fh-z]" "$(SOURCE)" | sed -E \
+	grep -E "^[a-z]" "$(SOURCE)" | grep -Ev "^(gray|syntax_)" | sed -E \
 		-e 's/^([_[:alnum:]]*) (.*)$$/\1 = "\2"/' \
 		-e 's/_/-/g' -e 's/"//g' \
 		-e 's/^cursor /cursor-color /' -e 's/cursor-text-color/cursor-text/' \
@@ -94,7 +96,7 @@ out/kitty.conf: $(SOURCE) Makefile
 	mkdir -p "$(@D)"
 	printf "# $(TARGET_HEADER_TITLE)\n" >"$@"
 	printf "# $(TARGET_HEADER_FILE)\n\n" "$@" >>"$@"
-	grep "^[a-fh-z]" "$(SOURCE)" >>"$@"
+	grep -E "^[a-z]" "$(SOURCE)" | grep -Ev "^(gray|syntax_)" >>"$@"
 
 tmp/vivaldi/settings.json: $(SOURCE) Makefile out/ax-monokai.inc.sh
 	mkdir -p "$(@D)"

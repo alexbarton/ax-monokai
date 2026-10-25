@@ -65,15 +65,17 @@ The following 16 grayscale levels are defined:
 | #e4e3e0 | -
 | #f5f4f1 | color15
 
-### Special colors
+### Syntax colors
 
-These colors are derived from other projects and used in some themes:
+These colors are derived from the VS Code "Monokai Operator" syntax theme and
+are only used for syntax highlighting in the VS Code color theme (they are not
+part of the terminal themes):
 
-| Color   | Comment
-|---------|-------------------------------------------------------------------
-| #e6db74 | Derived from the VS Code "Monokai Operator" syntax theme
-| #f44747 | Derived from the VS Code "Monokai Operator" syntax theme
-| #ae81ff | Derived from the VS Code "Monokai Operator" syntax theme
+| Color   | Name            | Comment
+|---------|-----------------|-------------------------------------------------
+| #e6db74 | syntax_string   | Strings, Markdown links, changed and list markup
+| #ae81ff | syntax_constant | Numbers, language constants, escapes, debug tokens
+| #f44747 | syntax_invalid  | Invalid code and error tokens
 
 ## Installation
 
