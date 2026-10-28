@@ -12,6 +12,7 @@ SOURCE = AX-Monokai.conf
 TARGETS = \
 	out/ax-monokai.csv \
 	out/ax-monokai.inc.sh \
+	out/AX-Monokai.itermcolors \
 	out/ghostty.conf \
 	out/kitty.conf \
 	out/vivaldi.zip \
@@ -34,6 +35,33 @@ TARGET_HEADER_FILE = Generated file ($(SOURCE) -> %s), do not edit!
 
 VSCE_OPTIONS = --readme-path VSCode.md
 
+# iTerm2 color keys ("_" becomes " ") and their AX-Monokai.conf variables.
+ITERM2_COLORS = \
+	Ansi_0_Color:color0 \
+	Ansi_1_Color:color1 \
+	Ansi_2_Color:color2 \
+	Ansi_3_Color:color3 \
+	Ansi_4_Color:color4 \
+	Ansi_5_Color:color5 \
+	Ansi_6_Color:color6 \
+	Ansi_7_Color:color7 \
+	Ansi_8_Color:color8 \
+	Ansi_9_Color:color9 \
+	Ansi_10_Color:color10 \
+	Ansi_11_Color:color11 \
+	Ansi_12_Color:color12 \
+	Ansi_13_Color:color13 \
+	Ansi_14_Color:color14 \
+	Ansi_15_Color:color15 \
+	Background_Color:background \
+	Bold_Color:foreground \
+	Cursor_Color:cursor \
+	Cursor_Text_Color:cursor_text_color \
+	Foreground_Color:foreground \
+	Link_Color:color12 \
+	Selected_Text_Color:selection_foreground \
+	Selection_Color:selection_background \
+
 all: $(ALL_TARGETS)
 
 optional: $(OPTIONAL_TARGETS)
@@ -44,6 +72,7 @@ check: all
 	grep -Fq 'color15, #f5f4f1, f5, f4, f1, 245, 244, 241' out/ax-monokai.csv
 	grep -Fq 'export cursor="ff5820"' out/ax-monokai.inc.sh
 	grep -Fq 'palette = 13=#fb87ff' out/ghostty.conf
+	grep -Fq '<real>0.17254902</real>' out/AX-Monokai.itermcolors
 	grep -Fq 'selection_background #0a5d78' out/kitty.conf
 	unzip -l out/vivaldi.zip | grep -Fq 'settings.json'
 	grep -Fq '#fd971f' out/vscode-terminal.json
@@ -80,6 +109,29 @@ out/ax-monokai.inc.sh: $(SOURCE) Makefile
 	printf "# $(TARGET_HEADER_TITLE)\n" >"$@"
 	printf "# $(TARGET_HEADER_FILE)\n\n" "$@" >>"$@"
 	sed -En -e 's/^([_[:alnum:]]*) #?(.*)$$/export \1="\2"/p' "$(SOURCE)" >>"$@"
+
+out/AX-Monokai.itermcolors: $(SOURCE) Makefile out/ax-monokai.inc.sh
+	mkdir -p "$(@D)"
+	. out/ax-monokai.inc.sh && { \
+		printf '<?xml version="1.0" encoding="UTF-8"?>\n'; \
+		printf '<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">\n'; \
+		printf "<!-- $(TARGET_HEADER_TITLE) -->\n"; \
+		printf "<!-- $(TARGET_HEADER_FILE) -->\n" "$@"; \
+		printf '<plist version="1.0">\n<dict>\n'; \
+		for map in $(ITERM2_COLORS); do \
+			key="$${map%%:*}"; var="$${map#*:}"; hex="$${!var}"; \
+			printf '\t<key>%s</key>\n\t<dict>\n' "$${key//_/ }"; \
+			LC_ALL=C awk -v r=$$((16#$${hex:0:2})) -v g=$$((16#$${hex:2:2})) -v b=$$((16#$${hex:4:2})) 'BEGIN { \
+				printf "\t\t<key>Alpha Component</key>\n\t\t<real>1</real>\n"; \
+				printf "\t\t<key>Blue Component</key>\n\t\t<real>%.8f</real>\n", b / 255; \
+				printf "\t\t<key>Color Space</key>\n\t\t<string>sRGB</string>\n"; \
+				printf "\t\t<key>Green Component</key>\n\t\t<real>%.8f</real>\n", g / 255; \
+				printf "\t\t<key>Red Component</key>\n\t\t<real>%.8f</real>\n", r / 255; \
+			}'; \
+			printf '\t</dict>\n'; \
+		done; \
+		printf '</dict>\n</plist>\n'; \
+	} >"$@"
 
 out/ghostty.conf: $(SOURCE) Makefile
 	mkdir -p "$(@D)"

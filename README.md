@@ -15,6 +15,7 @@ terminal emulators, text editors, web browsers, and more.
 - CSV (`out/ax-monokai.csv`)
 - foot (`out/foot.ini`)
 - Ghostty (`out/ghostty.conf`)
+- iTerm2 (`out/AX-Monokai.itermcolors`)
 - Kitty (`out/kitty.conf`)
 - POSIX Shell (`out/ax-monokai.inc.sh`)
 - Vivaldi (`out/vivaldi.zip`)
